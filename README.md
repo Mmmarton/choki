@@ -17,6 +17,7 @@ The application is based on actions of the masses.
 ### Implementation
 Implementation will happen in 3 steps.
 
+#### Phases
 1) Walking skeleton  
   - landing page
   - search list with elements
@@ -34,3 +35,13 @@ Implementation will happen in 3 steps.
   - add WIP status management
   - admins can edit chocolates
   - admins may revoke user rights
+  
+  ### Design
+  
+  The palette of the webpage is as follows:
+  
+  - ![#5e0b15](https://placehold.it/15/5e0b15/000000?text=+) `#5e0b15`
+  - ![#232020](https://placehold.it/15/232020/000000?text=+) `#232020`
+  - ![#955e42](https://placehold.it/15/955e42/000000?text=+) `#955e42`
+  - ![#8e443d](https://placehold.it/15/8e443d/000000?text=+) `#8e443d`
+  - ![#f3e9dc](https://placehold.it/15/f3e9dc/000000?text=+) `#f3e9dc`
