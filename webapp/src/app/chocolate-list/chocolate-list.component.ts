@@ -13,5 +13,7 @@ export class ChocolateListComponent implements OnInit {
 
   ngOnInit() {
     this.keyword = this.activatedRoute.snapshot.paramMap.get('keyword');
+    //subscribe to store to get list
+    //make request
   }
 }
