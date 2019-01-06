@@ -11,4 +11,10 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  keywordChanged(event: any) {
+    if (event.key === 'Enter') {
+      //goto list page
+    }
+  }
 }
