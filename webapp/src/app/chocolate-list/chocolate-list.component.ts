@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'choki-chocolate-list',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chocolate-list.component.scss']
 })
 export class ChocolateListComponent implements OnInit {
+  private keyword: string;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
+    this.keyword = this.activatedRoute.snapshot.paramMap.get('keyword');
   }
-
 }
