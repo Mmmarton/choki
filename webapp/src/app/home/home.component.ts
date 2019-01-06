@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'choki-home',
@@ -8,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   keyword: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   keywordChanged(event: any) {
     if (event.key === 'Enter') {
-      //goto list page
+      this.router.navigate(['list/', this.keyword ? this.keyword : '']);
     }
   }
 }

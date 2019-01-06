@@ -1,6 +1,11 @@
 <div class="container">
   <div class="search">
     <label for="search">Search</label>
-    <input type="text" id="search" (ngModel)="keyword" (keyup)="keywordChanged($event)" />
+    <input
+      type="text"
+      id="search"
+      [(ngModel)]="keyword"
+      (keyup)="keywordChanged($event)"
+    />
   </div>
 </div>
