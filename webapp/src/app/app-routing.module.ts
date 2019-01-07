@@ -9,6 +9,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'chocolate',
+    loadChildren: './chocolate/chocolate.module#ChocolateModule'
+  },
+  {
     path: 'home',
     component: HomeComponent
   },

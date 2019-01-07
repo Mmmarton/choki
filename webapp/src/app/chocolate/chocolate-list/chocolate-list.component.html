@@ -1,9 +1,13 @@
 <div class="container">
-  <div class="loader" *ngIf="isLoading$ | async">
-    Loading...
-  </div>
+  <div class="loader" *ngIf="(isLoading$ | async)">Loading...</div>
 
   <div class="content" *ngIf="!(isLoading$ | async)">
-    content
+    <img src="../../../assets/img/milka_bubby.jpg" alt="chocolate image" />
+    <img src="../../../assets/img/milka_cookie.jpg" alt="chocolate image" />
+    <img src="../../../assets/img/milka_hazelnut.JPG" alt="chocolate image" />
+    <img src="../../../assets/img/milka_milk.jpg" alt="chocolate image" />
+    <img src="../../../assets/img/milka_noisette.jpg" alt="chocolate image" />
+    <img src="../../../assets/img/milka_oreo.jpg" alt="chocolate image" />
+    <img src="../../../assets/img/milka_swing.jpg" alt="chocolate image" />
   </div>
 </div>

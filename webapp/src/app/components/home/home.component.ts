@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   keywordChanged(event: any) {
     if (event.key === 'Enter') {
       this.store.dispatch(new UI.StartLoading());
-      this.router.navigate(['list/', this.keyword ? this.keyword : '']);
+      this.router.navigate(['chocolate/list/', this.keyword ? this.keyword : '']);
     }
   }
 }

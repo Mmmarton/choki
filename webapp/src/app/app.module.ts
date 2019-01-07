@@ -5,7 +5,6 @@ import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { reducers } from './app.reducer';
-import { ChocolateModule } from './chocolate';
 import { HomeComponent, NotFoundComponent } from './components';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { HomeComponent, NotFoundComponent } from './components';
     BrowserModule,
     FormsModule,
     StoreModule.forRoot(reducers),
-    ChocolateModule,
     AppRoutingModule
   ],
   providers: [],
