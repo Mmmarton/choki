@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChocolateListComponent } from './chocolate-list/chocolate-list.component';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent, NotFoundComponent } from './components';
 
 const routes: Routes = [
   {
@@ -13,10 +11,6 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
-  {
-    path: 'list/:keyword',
-    component: ChocolateListComponent
   },
   {
     path: '**',

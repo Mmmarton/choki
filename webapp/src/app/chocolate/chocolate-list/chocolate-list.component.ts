@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as fromRoot from '../app.reducer';
-import * as UI from '../shared/ui.actions';
+import * as fromRoot from '../../app.reducer';
+import * as UI from '../../shared/ui.actions';
 
 @Component({
   selector: 'choki-chocolate-list',

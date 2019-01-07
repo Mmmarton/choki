@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import * as fromRoot from '../app.reducer';
-import * as UI from '../shared/ui.actions';
+import * as fromRoot from '../../app.reducer';
+import * as UI from '../../shared/ui.actions';
 
 @Component({
   selector: 'choki-home',
