@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import * as fromUi from '../ui.reducer';
+import * as fromRoot from '../app.reducer';
+import * as UI from '../shared/ui.actions';
 
 @Component({
   selector: 'choki-home',
@@ -11,13 +12,13 @@ import * as fromUi from '../ui.reducer';
 export class HomeComponent implements OnInit {
   keyword: string;
 
-  constructor(private router: Router, private store: Store<fromUi.State>) {}
+  constructor(private router: Router, private store: Store<fromRoot.State>) {}
 
   ngOnInit() {}
 
   keywordChanged(event: any) {
     if (event.key === 'Enter') {
-      this.store.dispatch({type: 'START_LOADING'});
+      this.store.dispatch(new UI.StartLoading());
       this.router.navigate(['list/', this.keyword ? this.keyword : '']);
     }
   }

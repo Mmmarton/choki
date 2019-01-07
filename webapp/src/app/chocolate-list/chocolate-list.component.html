@@ -1,3 +1,9 @@
-<p>
-  chocolate-list works!
-</p>
+<div class="container">
+  <div class="loader" *ngIf="isLoading$ | async">
+    Loading...
+  </div>
+
+  <div class="content" *ngIf="!(isLoading$ | async)">
+    content
+  </div>
+</div>

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ChocolateListComponent } from './chocolate-list/chocolate-list.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { uiReducer } from './ui.reducer';
+import { reducers } from './app.reducer';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { uiReducer } from './ui.reducer';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot({ ui: uiReducer })
+    StoreModule.forRoot(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]
