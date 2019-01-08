@@ -2,12 +2,17 @@
   <div class="loader" *ngIf="(isLoading$ | async)">Loading...</div>
 
   <div class="content" *ngIf="!(isLoading$ | async)">
-    <img src="../../../assets/img/milka_bubby.jpg" alt="chocolate image" />
-    <img src="../../../assets/img/milka_cookie.jpg" alt="chocolate image" />
-    <img src="../../../assets/img/milka_hazelnut.JPG" alt="chocolate image" />
-    <img src="../../../assets/img/milka_milk.jpg" alt="chocolate image" />
-    <img src="../../../assets/img/milka_noisette.jpg" alt="chocolate image" />
-    <img src="../../../assets/img/milka_oreo.jpg" alt="chocolate image" />
-    <img src="../../../assets/img/milka_swing.jpg" alt="chocolate image" />
+
+    <p>Searched for <b>{{keyword}}</b></p>
+    <input type="text" [(ngModel)]="secret" (change)="updateSecret()">
+    <p>{{secret}}</p>
+
+    <img class="thumbnail" src="../../../assets/img/milka_bubby.jpg" alt="chocolate image" />
+    <img class="thumbnail" src="../../../assets/img/milka_cookie.jpg" alt="chocolate image" />
+    <img class="thumbnail" src="../../../assets/img/milka_hazelnut.JPG" alt="chocolate image" />
+    <img class="thumbnail" src="../../../assets/img/milka_milk.jpg" alt="chocolate image" />
+    <img class="thumbnail" src="../../../assets/img/milka_noisette.jpg" alt="chocolate image" />
+    <img class="thumbnail" src="../../../assets/img/milka_oreo.jpg" alt="chocolate image" />
+    <img class="thumbnail" src="../../../assets/img/milka_swing.jpg" alt="chocolate image" />
   </div>
 </div>

@@ -20,7 +20,9 @@ export function uiReducer(state: State = initialState, action: UIActions) {
         ...state,
         isLoading: false
       };
+    default:
+      return state;
   }
 }
 
-export const getIsLoading = (state: State) => state ? state.isLoading : true;
+export const getIsLoading = (state: State) => (state ? state.isLoading : true);

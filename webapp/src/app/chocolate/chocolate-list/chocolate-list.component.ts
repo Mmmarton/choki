@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as fromRoot from '../../app.reducer';
 import * as UI from '../../shared/ui.actions';
+import * as CHOCOLATE from '../chocolate.actions';
 
 @Component({
   selector: 'choki-chocolate-list',
@@ -12,8 +13,8 @@ import * as UI from '../../shared/ui.actions';
 })
 export class ChocolateListComponent implements OnInit {
   isLoading$: Observable<boolean>;
-
-  private keyword: string;
+  keyword: string;
+  secret: string;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -25,7 +26,15 @@ export class ChocolateListComponent implements OnInit {
       this.store.dispatch(new UI.StopLoading());
     }, 1000);
 
+    this.store
+      .select(fromRoot.getSecret)
+      .subscribe(secret => (this.secret = secret));
+
     this.isLoading$ = this.store.select(fromRoot.getIsLoading);
     this.keyword = this.activatedRoute.snapshot.paramMap.get('keyword');
+  }
+
+  updateSecret() {
+    this.store.dispatch(new CHOCOLATE.SetSecret(this.secret));
   }
 }
