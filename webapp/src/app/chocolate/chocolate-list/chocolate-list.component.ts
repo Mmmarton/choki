@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import * as fromRoot from '../../app.reducer';
 import * as UI from '../../shared/ui.actions';
 import * as CHOCOLATE from '../chocolate.actions';
+import { ChocolateFilters } from '../chocolate.model';
 
 @Component({
   selector: 'choki-chocolate-list',
@@ -14,7 +15,7 @@ import * as CHOCOLATE from '../chocolate.actions';
 export class ChocolateListComponent implements OnInit {
   isLoading$: Observable<boolean>;
   keyword: string;
-  secret: string;
+  filters: ChocolateFilters;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -25,15 +26,15 @@ export class ChocolateListComponent implements OnInit {
     this.fetchChocolates();
 
     this.store
-      .select(fromRoot.getSecret)
-      .subscribe(secret => (this.secret = secret));
+      .select(fromRoot.getFilters)
+      .subscribe(filters => (this.filters = filters));
 
     this.isLoading$ = this.store.select(fromRoot.getIsLoading);
     this.keyword = this.activatedRoute.snapshot.paramMap.get('keyword');
   }
 
   updateSecret() {
-    this.store.dispatch(new CHOCOLATE.SetSecret(this.secret));
+    this.store.dispatch(new CHOCOLATE.SetFilters(this.filters));
   }
 
   private fetchChocolates() {

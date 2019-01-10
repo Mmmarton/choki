@@ -1,11 +1,12 @@
 import { Action } from '@ngrx/store';
+import { ChocolateFilters } from './chocolate.model';
 
-export const SET_SECRET = '[CHOCOLATE] set the secret';
+export const SET_FILTERS = '[CHOCOLATE] set the filters';
 
-export class SetSecret implements Action {
-  readonly type = SET_SECRET;
+export class SetFilters implements Action {
+  readonly type = SET_FILTERS;
 
-  constructor(public payload: string) {}
+  constructor(public payload: ChocolateFilters) {}
 }
 
-export type ChocolateActions = SetSecret;
+export type ChocolateActions = SetFilters;

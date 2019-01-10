@@ -7,31 +7,20 @@
     </p>
 
     <div class="filters">
+      <span class="filters-title">Filters</span>
       <div class="filter">
-          <p class="filter-label">Stars</p>
-          <label for="search">Min</label>
-          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
-    
-          <label for="search">Max</label>
-          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+          <label for="stars">Stars</label>
+          <input type="text" [(ngModel)]="filters.stars" id="stars" (change)="updateSecret()" />
       </div>
 
       <div class="filter">
-          <p class="filter-label">Money</p>
-          <label for="search">Min</label>
-          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
-    
-          <label for="search">Max</label>
-          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+          <label for="money">Money</label>
+          <input type="text" [(ngModel)]="filters.money" id="money" (change)="updateSecret()" />
       </div>
 
       <div class="filter">
-          <p class="filter-label">Hearts</p>
-          <label for="search">Min</label>
-          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
-    
-          <label for="search">Max</label>
-          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+          <label for="hearts">Hearts</label>
+          <input type="text" [(ngModel)]="filters.hearts" id="hearts" (change)="updateSecret()" />
       </div>
     </div>
 

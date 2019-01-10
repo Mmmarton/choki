@@ -44,7 +44,7 @@ export const getIsLoading = createSelector(
 export const getChocolateState = createFeatureSelector<fromChocolate.State>(
   'chocolate'
 );
-export const getSecret = createSelector(
+export const getFilters = createSelector(
   getChocolateState,
-  fromChocolate.getSecret
+  fromChocolate.getFilters
 );

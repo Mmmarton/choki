@@ -1,11 +1,16 @@
-import { ChocolateActions, SET_SECRET } from './chocolate.actions';
+import { ChocolateActions, SET_FILTERS } from './chocolate.actions';
+import { ChocolateFilters } from './chocolate.model';
 
 export interface State {
-  secret: string;
+  filters: ChocolateFilters;
 }
 
 const initialState: State = {
-  secret: ''
+  filters: {
+    hearts: 0,
+    money: 0,
+    stars: 0
+  }
 };
 
 export function chocolateReducer(
@@ -13,14 +18,14 @@ export function chocolateReducer(
   action: ChocolateActions
 ) {
   switch (action.type) {
-    case SET_SECRET:
+    case SET_FILTERS:
       return {
         ...state,
-        secret: action.payload
+        filters: action.payload
       };
     default:
       return state;
   }
 }
 
-export const getSecret = (state: State) => (state ? state.secret : '');
+export const getFilters = (state: State) => state.filters;

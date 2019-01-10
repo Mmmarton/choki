@@ -6,6 +6,6 @@ jsxSingleQuote: true
 trailingComma: 'none'
 bracketSpacing: true
 jsxBracketSameLine: true
-arrowParens: 'avoid'
+arrowParens: 'always'
 proseWrap: 'never'
 htmlWhitespaceSensitivity: 'ignore'
