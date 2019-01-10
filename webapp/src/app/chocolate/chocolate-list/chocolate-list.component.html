@@ -2,11 +2,41 @@
   <div class="loader" *ngIf="(isLoading$ | async)">...</div>
 
   <div class="content" *ngIf="!(isLoading$ | async)">
+    <p class="search-term">
+      Searched for "<b>{{ keyword }}</b>"
+    </p>
 
-    <p>Searched for <b>{{keyword}}</b></p>
-    <input type="text" [(ngModel)]="secret" (change)="updateSecret()">
-    <p>{{secret}}</p>
+    <div class="filters">
+      <div class="filter">
+          <p class="filter-label">Stars</p>
+          <label for="search">Min</label>
+          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+    
+          <label for="search">Max</label>
+          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+      </div>
 
-    <div class="thumbnail"></div>
+      <div class="filter">
+          <p class="filter-label">Money</p>
+          <label for="search">Min</label>
+          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+    
+          <label for="search">Max</label>
+          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+      </div>
+
+      <div class="filter">
+          <p class="filter-label">Hearts</p>
+          <label for="search">Min</label>
+          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+    
+          <label for="search">Max</label>
+          <input type="text" [(ngModel)]="secret" id="search" (change)="updateSecret()" />
+      </div>
+    </div>
+
+    <div class="lict">
+      <div class="thumbnail"></div>
+    </div>
   </div>
 </div>
