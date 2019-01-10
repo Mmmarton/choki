@@ -22,9 +22,7 @@ export class ChocolateListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    setTimeout(() => {
-      this.store.dispatch(new UI.StopLoading());
-    }, 1000);
+    this.fetchChocolates();
 
     this.store
       .select(fromRoot.getSecret)
@@ -36,5 +34,12 @@ export class ChocolateListComponent implements OnInit {
 
   updateSecret() {
     this.store.dispatch(new CHOCOLATE.SetSecret(this.secret));
+  }
+
+  private fetchChocolates() {
+    this.store.dispatch(new UI.StartLoading());
+    setTimeout(() => {
+      this.store.dispatch(new UI.StopLoading());
+    }, 1000);
   }
 }
