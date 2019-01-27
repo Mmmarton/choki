@@ -1,0 +1,207 @@
+$w1: 7.43902439%;
+$w2: 15.84804878%;
+$w3: 24.25707317%;
+$w4: 32.66609756%;
+$w5: 41.07512195%;
+$w6: 49.48414634%;
+$w7: 57.89317073%;
+$w8: 66.30219512%;
+$w9: 74.71121951%;
+$w10: 83.1202439%;
+$w11: 91.52926829%;
+$w12: 99.93829268%;
+
+// widths
+
+.container {
+  height: 100%;
+  width: 85.4166666%;
+  padding: 0 7.2916666%;
+
+  display: inline-block;
+  flex-flow: row wrap;
+}
+
+.row {
+  width: 100%;
+  display: inline-block;
+}
+
+.col {
+  display: inline-block;
+  position: relative;
+  margin: 0 0.486666%;
+}
+
+.col:first-of-type {
+  margin-margin-left: 0;
+}
+
+.col:last-of-type {
+  margin-margin-right: 0;
+}
+
+.col-1 {
+  width: $w1;
+}
+
+.col-2 {
+  width: $w2;
+}
+
+.col-3 {
+  width: $w3;
+}
+
+.col-4 {
+  width: $w4;
+}
+
+.col-5 {
+  width: $w5;
+}
+
+.col-6 {
+  width: $w6;
+}
+
+.col-7 {
+  width: $w7;
+}
+
+.col-8 {
+  width: $w8;
+}
+
+.col-9 {
+  width: $w9;
+}
+
+.col-10 {
+  width: $w10;
+}
+
+.col-11 {
+  width: $w11;
+}
+
+.col-12 {
+  width: $w12;
+}
+
+// spacers
+
+.push-1 {
+  margin-left: $w1;
+}
+
+.push-2 {
+  margin-left: $w2;
+}
+
+.push-3 {
+  margin-left: $w3;
+}
+
+.push-4 {
+  margin-left: $w4;
+}
+
+.push-5 {
+  margin-left: $w5;
+}
+
+.push-6 {
+  margin-left: $w6;
+}
+
+.push-7 {
+  margin-left: $w7;
+}
+
+.push-8 {
+  margin-left: $w8;
+}
+
+.push-9 {
+  margin-left: $w9;
+}
+
+.push-10 {
+  margin-left: $w10;
+}
+
+.push-11 {
+  margin-left: $w11;
+}
+
+.push-12 {
+  margin-left: $w12;
+}
+
+// floaters
+
+.float {
+  float: right;
+  margin-right: 0;
+}
+
+.float-1 {
+  @extend .float;
+  margin-right: $w1;
+}
+
+.float-2 {
+  @extend .float;
+  margin-right: $w2;
+}
+
+.float-3 {
+  @extend .float;
+  margin-right: $w3;
+}
+
+.float-4 {
+  @extend .float;
+  margin-right: $w4;
+}
+
+.float-5 {
+  @extend .float;
+  margin-right: $w5;
+}
+
+.float-6 {
+  @extend .float;
+  margin-right: $w6;
+}
+
+.float-7 {
+  @extend .float;
+  margin-right: $w7;
+}
+
+.float-8 {
+  @extend .float;
+  margin-right: $w8;
+}
+
+.float-9 {
+  @extend .float;
+  margin-right: $w9;
+}
+
+.float-10 {
+  @extend .float;
+  margin-right: $w10;
+}
+
+.float-11 {
+  @extend .float;
+  margin-right: $w11;
+}
+
+.float-12 {
+  @extend .float;
+  margin-right: $w12;
+}

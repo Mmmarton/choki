@@ -1,0 +1,65 @@
+@import '../../../styles/palette';
+
+.container {
+  background-color: $accent2;
+  height: 100%;
+}
+
+.search {
+  top: calc(50vh - 9.3rem);
+}
+
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 9.3rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 6px $shadow;
+  color: $color2;
+}
+
+.search-box {
+  text-align: right;
+}
+
+.search-icon {
+  color: rgba($color2, 0.5);
+  position: relative;
+  font-size: 2rem;
+  top: -3rem;
+  right: 1rem;
+}
+
+input {
+  display: block;
+  border: none;
+  background-color: $shadow;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: $color2;
+  width: calc(100% - 1.4rem);
+  margin-top: 1rem;
+  box-shadow: 3px 3px 6px $shadow-fine;
+  text-overflow: ellipsis;
+}
+
+.hero {
+  top: calc(50vh - 9.3rem);
+}
+
+.hero-image {
+  margin-left: 1rem;
+  width: 398;
+  height: auto;
+}
+
+// @media only screen and (max-width: 1660px) {
+//   input::-webkit-input-placeholder {
+//     color: transparent;
+//   }
+//   input::-moz-placeholder {
+//     color: transparent;
+//   }
+//   input::-moz-placeholder {
+//     color: transparent;
+//   }
+// }

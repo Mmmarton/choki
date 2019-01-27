@@ -1,11 +1,18 @@
-<div>
-  <div>
-    <label for="search">Search</label>
-    <input
-      type="text"
-      id="search"
-      [(ngModel)]="keyword"
-      (keyup)="keywordChanged($event)"
-    />
+<div class="container">
+  <div class="search col col-6">
+    <div class="title col float-1">CHOKI</div>
+    <div class="search-box col col-9 float">
+      <input
+        type="text"
+        placeholder="{{placeholder}}"
+        [(ngModel)]="keyword"
+        (keyup)="keywordChanged($event)"
+      />
+      <i class="search-icon fa fa-search"></i>
+    </div>
+  </div>
+
+  <div class="hero col col-3">
+    <img class="hero-image" src="../../../assets/img/csoki.png" alt="Chocolate stack">
   </div>
 </div>
