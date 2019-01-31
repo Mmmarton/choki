@@ -4,7 +4,7 @@ import { ChocolateListComponent } from './chocolate-list';
 
 const routes: Routes = [
   {
-    path: 'list/:keyword',
+    path: 'chocolate',
     component: ChocolateListComponent
   }
 ];

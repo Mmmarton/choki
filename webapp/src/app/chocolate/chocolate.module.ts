@@ -6,7 +6,6 @@ import { ChocolateRoutingModule } from './chocolate-routing.module';
 
 @NgModule({
   declarations: [ChocolateListComponent],
-  imports: [CommonModule, FormsModule, ChocolateRoutingModule],
-  providers: []
+  imports: [CommonModule, FormsModule, ChocolateRoutingModule]
 })
 export class ChocolateModule {}
