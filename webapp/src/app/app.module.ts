@@ -9,7 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, HeaderComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ChocolateModule],
+  imports: [BrowserModule, FormsModule, ChocolateModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })

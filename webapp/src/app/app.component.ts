@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'choki-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'choki';
+  showHeader = false;
+
+  constructor(router: Router) {
+    router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        this.showHeader = event.urlAfterRedirects !== '/home';
+      }
+    });
+  }
 }
