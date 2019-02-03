@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'choki-chocolate-list',
@@ -8,8 +7,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./chocolate-list.component.scss']
 })
 export class ChocolateListComponent implements OnInit {
-  isLoading$: Observable<boolean>;
   keyword: string;
+  previews = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
   constructor(private activatedRoute: ActivatedRoute) {}
 

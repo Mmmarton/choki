@@ -45,3 +45,6 @@ Implementation will happen in 3 steps.
   - ![#955e42](https://placehold.it/15/955e42/000000?text=+) `#955e42`
   - ![#8e443d](https://placehold.it/15/8e443d/000000?text=+) `#8e443d`
   - ![#f3e9dc](https://placehold.it/15/f3e9dc/000000?text=+) `#f3e9dc`
+
+#### Details
+  - for the grid system using **Bootstrap Grid v4.2.1**

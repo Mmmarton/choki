@@ -1,7 +1,11 @@
+@import '../../../styles/grid';
 
-.thumbnail {
-    width: 8rem;
-    height: 8rem;
-    display: block;
-    background-color: brown;
+.container {
+  padding-top: 12rem;
+  height: calc(100% - 12rem);
+  text-align: center;
+}
+
+.dummy-element {
+  background-color: red;
 }

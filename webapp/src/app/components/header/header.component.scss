@@ -2,10 +2,10 @@
 
 .container {
   position: fixed;
-  height: 7.2rem;
+  height: 10.6rem;
   background-color: $color3;
-  box-shadow: 0px 0px 10px 10px $color3;
-  text-align: center;
+  justify-content: center;
+  z-index: 100;
 }
 
 .dash {
@@ -15,7 +15,7 @@
   background: url('../../../assets/img/dash.svg');
   height: 7px;
   width: 100vw;
-  z-index: 9;
+  z-index: 99;
   filter: drop-shadow( 3px 3px 6px $shadow);
 }
 
@@ -28,5 +28,5 @@
   text-shadow: 3px 3px 6px $shadow;
   background-color: $color3;
   color: $color1;
-  z-index: 10;
+  z-index: 100;
 }
