@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('searchInput') searchInput;
   keyword: string;
   placeholder: string;
 
@@ -16,11 +17,10 @@ export class HomeComponent implements OnInit {
     this.generatePlaceholder();
   }
 
-  @HostListener('window:resize')
   generatePlaceholder() {
-    if (window.innerWidth > 1660) {
+    if (this.searchInput.nativeElement.offsetWidth > 475) {
       this.placeholder = 'Search for a chocolate...';
-    } else if (window.innerWidth > 1375) {
+    } else if (this.searchInput.nativeElement.offsetWidth > 390) {
       this.placeholder = 'Browse chocolates...';
     } else {
       this.placeholder = 'Chocolates...';

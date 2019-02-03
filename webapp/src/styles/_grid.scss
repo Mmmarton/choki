@@ -13,10 +13,10 @@ $widths: (
   12: 99.93829268%
 );
 
-$screen-sizes: (
-  'l': 1600px,
-  'm': 1000px,
-  's': 700px
+$breakpoints: (
+  l: 1600px,
+  m: 1000px,
+  s: 700px
 );
 
 .container {
@@ -58,8 +58,14 @@ $screen-sizes: (
 
 @include create-grid-elements();
 
-@each $name, $size in $screen-sizes {
-  @media only screen and (max-width: #{$size}) {
-    @include create-grid-elements('-' + $name);
+@mixin respond-to($breakpoint) {
+  @media only screen and (max-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@each $breakpoint, $size in $breakpoints {
+  @include respond-to($breakpoint) {
+    @include create-grid-elements('-' + $breakpoint);
   }
 }

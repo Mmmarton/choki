@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="search col col-6">
-    <div class="title col float-1">CHOKI</div>
-    <div class="search-box col col-9 float">
+  <div class="search col-6 col-m-12">
+    <div class="title float-1">CHOKI</div>
+    <div class="search-box col-9">
       <input
+        #searchInput
         type="text"
         placeholder="{{placeholder}}"
         [(ngModel)]="keyword"
@@ -12,7 +13,7 @@
     </div>
   </div>
 
-  <div class="hero col col-3">
+  <div class="hero col-6 col-m-12">
     <img class="hero-image" src="../../../assets/img/csoki.png" alt="Chocolate stack">
   </div>
 </div>
