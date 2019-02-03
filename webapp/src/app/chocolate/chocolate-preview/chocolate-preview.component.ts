@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chocolate-preview.component.scss']
 })
 export class ChocolatePreviewComponent implements OnInit {
-  angle: string;
+  transforms: string;
 
   constructor() {}
 
   ngOnInit() {
-    this.angle = `rotate(${this.random(-15, 15)}deg)`;
+    this.transforms = `rotate(${this.random(-12, 12)}deg) translateY(${this.random(-10, 20)}px)`;
   }
 
   private random(min, max) {
