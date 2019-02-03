@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ChocolateListComponent implements OnInit {
   keyword: string;
-  previews = [1,2,3,4,5,6,7];
+  previews = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
