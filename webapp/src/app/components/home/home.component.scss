@@ -19,9 +19,15 @@
 
 .search-box {
   text-align: right;
+  box-shadow: 3px 3px 6px $shadow-fine;
+  background-color: $shadow;
+  border-radius: 5px;
+  margin-top: 1rem;
+  height: 4.4rem;
 }
 
 .search-icon {
+  display: inline;
   color: rgba($color2, 0.5);
   position: relative;
   font-size: 2rem;
@@ -32,14 +38,11 @@
 input {
   display: block;
   border: none;
-  background-color: $shadow;
   font-size: 2.8rem;
   font-weight: 300;
   color: $color2;
-  width: calc(100% - 1.4rem);
-  margin-top: 1rem;
-  box-shadow: 3px 3px 6px $shadow-fine;
-  text-overflow: ellipsis;
+  width: calc(100% - 4.5rem);
+  background-color: transparent;
 }
 
 .hero {
@@ -51,15 +54,3 @@ input {
   width: 398;
   height: auto;
 }
-
-// @media only screen and (max-width: 1660px) {
-//   input::-webkit-input-placeholder {
-//     color: transparent;
-//   }
-//   input::-moz-placeholder {
-//     color: transparent;
-//   }
-//   input::-moz-placeholder {
-//     color: transparent;
-//   }
-// }
