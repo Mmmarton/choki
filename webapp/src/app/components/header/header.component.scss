@@ -1,5 +1,30 @@
-.header {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid black;
+@import '../../../styles/palette';
+
+.container {
+  position: fixed;
+  height: 7.2rem;
+  background-color: $color3;
+  box-shadow: 0px 0px 10px 10px $color3;
+}
+
+.dash {
+  position: fixed;
+  left: 0;
+  top: 3.2rem;
+  background: url('../../../assets/img/dash.svg');
+  height: 7px;
+  width: 100vw;
+  z-index: 9;
+}
+
+.home-link {
+  position: relative;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 6.3rem; // font-size: 9.4rem;
+  text-shadow: 3px 3px 6px $shadow-fine;
+  background-color: $color3;
+  color: $color1;
+  z-index: 10;
 }
