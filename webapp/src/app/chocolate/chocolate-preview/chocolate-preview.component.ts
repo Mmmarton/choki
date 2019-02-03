@@ -7,11 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChocolatePreviewComponent implements OnInit {
   transforms: string;
+  showDetails = false;
+  rating: number;
 
   constructor() {}
 
   ngOnInit() {
-    this.transforms = `rotate(${this.random(-12, 12)}deg) translateY(${this.random(-10, 20)}px)`;
+    this.transforms = `rotate(${this.random(
+      -10,
+      10
+    )}deg) translateY(${this.random(-10, 15)}px)`;
+    this.rating = Math.floor(this.random(0, 5));
+  }
+
+  openDetails() {
+    this.showDetails = true;
+  }
+
+  get fullStars() {
+    return new Array(this.rating);
+  }
+
+  get hollowStars() {
+    return new Array(5 - this.rating);
   }
 
   private random(min, max) {

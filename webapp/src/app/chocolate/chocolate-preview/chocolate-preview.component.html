@@ -1,10 +1,27 @@
-<div class="preview-container" [ngStyle]="{'transform': transforms}">
+<div class="preview-container" [ngStyle]="{ transform: transforms }">
   <img
     class="preview-image"
     src="../../../assets/img/milka.jpeg"
     alt="Chocolate preview"
   />
-  <div class="open-details"><i class="plus-icon fa fa-plus"></i></div>
+  <div
+    class="details"
+    [ngClass]="showDetails ? 'full-details' : 'hidden-details'"
+    (click)="openDetails()"
+  >
+    <i *ngIf="!showDetails" class="plus-icon fa fa-plus"></i>
+    <div *ngIf="showDetails" style="text-align: left">
+      <div class="stars">
+        <i *ngFor="let i of fullStars" class="fas fa-star"></i>
+        <i *ngFor="let i of hollowStars" class="far fa-star"></i>
+      </div>
+      <span class="details-text">
+        There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injected humour, or
+        randomised words...
+      </span>
+    </div>
+  </div>
   <h1 class="name">Milka</h1>
   <h2 class="flavor">Hazelnut</h2>
 </div>
