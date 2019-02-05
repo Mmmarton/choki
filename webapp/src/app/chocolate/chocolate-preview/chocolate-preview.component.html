@@ -10,15 +10,13 @@
     (click)="openDetails()"
   >
     <i *ngIf="!showDetails" class="plus-icon fa fa-plus"></i>
-    <div *ngIf="showDetails" style="text-align: left">
+    <div *ngIf="showDetails" class="details-container">
       <div class="stars">
         <i *ngFor="let i of fullStars" class="fas fa-star"></i>
         <i *ngFor="let i of hollowStars" class="far fa-star"></i>
       </div>
       <span class="details-text">
-        There are many variations of passages of Lorem Ipsum available, but the
-        majority have suffered alteration in some form, by injected humour, or
-        randomised words...
+        There are many variations of passages of Lorem Ipsum available, but the majority...
       </span>
     </div>
   </div>

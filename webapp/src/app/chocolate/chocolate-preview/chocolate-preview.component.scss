@@ -85,6 +85,14 @@
   color: $accent2;
 }
 
+.details-container {
+  text-align: left;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
 .details-text {
   font-size: 1.9rem;
   color: $color4;
@@ -107,8 +115,14 @@
 }
 
 @include respond-to('s') {
+
+  .details-text {
+    font-size: 3rem;
+  }
+
   .stars {
     font-size: 3rem;
+    margin: 2rem 0;
 
     i {
       margin-right: 1rem;
