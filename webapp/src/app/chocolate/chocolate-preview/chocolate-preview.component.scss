@@ -87,10 +87,12 @@
 
 .details-container {
   text-align: left;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   height: 100%;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 .details-text {
@@ -108,6 +110,29 @@
   }
 }
 
+.more {
+  @extend %animate;
+  position: absolute;
+  bottom: 2.5rem;
+  align-self: center;
+  border-radius: 5px;
+  padding: 0.3rem 1.7rem 0.1rem 1.7rem;
+  color: $color4;
+  font-size: 2rem;
+  background-color: $accent2;
+  text-shadow: 3px 3px 6px $shadow;
+  box-shadow: 0px 3px 6px $shadow-hard;
+
+  &:hover {
+    @extend %animate;
+    cursor: pointer;
+    font-size: 2.6rem;
+    bottom: 2rem;
+    padding: 0.6rem 2.2rem 0.2rem 2.2rem;
+    box-shadow: 0px 3px 6px 1px $shadow-extra;
+  }
+}
+
 @include respond-to('m') {
   .stars {
     font-size: 2.1rem;
@@ -115,7 +140,6 @@
 }
 
 @include respond-to('s') {
-
   .details-text {
     font-size: 3rem;
   }

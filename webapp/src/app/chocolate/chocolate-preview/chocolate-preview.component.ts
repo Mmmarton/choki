@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { ChocolatePreview } from '../models';
 
 @Component({
   selector: 'choki-chocolate-preview',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ChocolatePreviewComponent implements OnInit {
   transforms: string;
   showDetails = false;
-  rating: number;
+
+  @Input()
+  chocolate: ChocolatePreview;
 
   constructor() {}
 
@@ -17,19 +20,28 @@ export class ChocolatePreviewComponent implements OnInit {
       -10,
       10
     )}deg) translateY(${this.random(-10, 15)}px)`;
-    this.rating = Math.floor(this.random(0, 5));
   }
 
-  openDetails() {
-    this.showDetails = true;
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+  }
+
+  showMore(event) {
+    event.stopPropagation();
   }
 
   get fullStars() {
-    return new Array(this.rating);
+    if (!this.chocolate) {
+      return [];
+    }
+    return new Array(this.chocolate.rating);
   }
 
   get hollowStars() {
-    return new Array(5 - this.rating);
+    if (!this.chocolate) {
+      return [];
+    }
+    return new Array(5 - this.chocolate.rating);
   }
 
   private random(min, max) {
