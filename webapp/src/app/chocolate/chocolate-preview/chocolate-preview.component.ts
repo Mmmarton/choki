@@ -24,6 +24,11 @@ export class ChocolatePreviewComponent implements OnInit {
     this.showDetails = true;
   }
 
+  closeDetails(event) {
+    event.stopPropagation();
+    this.showDetails = false;
+  }
+
   get fullStars() {
     return new Array(this.rating);
   }
