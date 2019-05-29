@@ -1,0 +1,19 @@
+@import '../../../styles/palette';
+@import '../../../styles/grid';
+
+.container {
+  padding-top: 11rem;
+  justify-content: start;
+}
+
+.image-container {
+    margin-top: 3rem;
+}
+
+.image {
+  background-color: $accent2;
+  box-shadow: 3px 3px 6px $shadow;
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
+}
