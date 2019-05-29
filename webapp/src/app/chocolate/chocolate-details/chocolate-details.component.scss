@@ -2,12 +2,39 @@
 @import '../../../styles/grid';
 
 .container {
-  padding-top: 11rem;
+  padding-top: 14rem;
   justify-content: start;
 }
 
-.image-container {
-    margin-top: 3rem;
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 4.4rem;
+  color: $accent2;
+  text-shadow: 3px 3px 6px $shadow;
+}
+
+.subtitle {
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  color: $color1;
+  text-shadow: 3px 3px 6px $shadow;
+}
+
+.stars {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  i {
+    color: $accent2;
+    margin: 0 0.3rem;
+  }
+}
+
+.description {
+  font-size: 1.9rem;
+  font-weight: 300;
+  padding-top: 2rem;
 }
 
 .image {

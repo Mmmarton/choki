@@ -1,9 +1,25 @@
 <div class="container">
-  <div class="image-container col-5 col-l-5 col-m-6 col-s-12">
+  <div class="col-5 col-s-12">
     <img
       class="image"
       src="../../../assets/img/milka.jpeg"
       alt="Chocolate preview"
     />
+    <div class="stars">
+      <i *ngFor="let i of fullStars" class="fas fa-star"></i>
+      <i *ngFor="let i of hollowStars" class="far fa-star"></i>
+    </div>
+  </div>
+  <div class="col-1"></div>
+  <div class="col-6 col-s-12">
+    <h1 class="title">Milka</h1>
+    <h2 class="subtitle">Hazelnut</h2>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elit
+      nulla, egestas id euismod non, porttitor sit amet elit. Suspendisse cursus
+      nisi nec ullamcorper laoreet. Praesent nec mollis eros, eu rhoncus elit.
+      Integer facilisis, est sed accumsan consectetur, nisl nisl finibus augue,
+      in cursus ante lorem et risus.
+    </p>
   </div>
 </div>
