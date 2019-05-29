@@ -10,8 +10,8 @@ import { ChocolatePreview } from '../models';
 export class ChocolateListComponent implements OnInit {
   keyword: string;
   chocolates: ChocolatePreview[] = [
-    { id: 1, description: "The finest one out there", image: 'milka', brand: "Milka", rating: 4, type: 'Milk' },
-    { id: 2, description: "Great taste ", image: 'milka', brand: "Milka", rating: 2, type: 'Hazelnut' }
+    { description: "The finest one out there", image: 'milka', brand: "Milka", rating: 4, type: 'Milk' },
+    { description: "Great taste ", image: 'milka', brand: "Milka", rating: 2, type: 'Hazelnut' }
   ];
 
   constructor(private activatedRoute: ActivatedRoute) { }
