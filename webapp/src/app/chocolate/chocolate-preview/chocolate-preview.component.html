@@ -1,7 +1,7 @@
 <div class="preview-container" [ngStyle]="{ transform: transforms }">
   <img
     class="preview-image"
-    src="../../../assets/img/milka.jpeg"
+    src="../../../assets/img/{{chocolate.image}}.jpeg"
     alt="Chocolate preview"
   />
   <div
@@ -16,11 +16,11 @@
         <i *ngFor="let i of hollowStars" class="far fa-star"></i>
       </div>
       <span class="details-text">
-        There are many variations of passages of Lorem Ipsum available, but the majority...
+        {{chocolate.description}}
       </span>
       <div class="more" (click)="showMore($event)">More</div>
     </div>
   </div>
-  <h1 class="name">Milka</h1>
-  <h2 class="flavor">Hazelnut</h2>
+  <h1 class="name">{{chocolate.brand}}</h1>
+  <h2 class="flavor">{{chocolate.type}}</h2>
 </div>

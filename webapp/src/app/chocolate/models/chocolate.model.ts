@@ -3,6 +3,6 @@ export class ChocolatePreview {
   rating: number;
   image: string;
   description: string;
-  name: string;
+  brand: string;
   type: string;
 }

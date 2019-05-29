@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ChocolatePreview } from '../models';
 
 @Component({
   selector: 'choki-chocolate-list',
@@ -8,9 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ChocolateListComponent implements OnInit {
   keyword: string;
-  previews = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+  chocolates: ChocolatePreview[] = [
+    { id: 1, description: "The finest one out there", image: 'milka', brand: "Milka", rating: 4, type: 'Milk' },
+    { id: 2, description: "Great taste ", image: 'milka', brand: "Milka", rating: 2, type: 'Hazelnut' }
+  ];
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.keyword = this.activatedRoute.snapshot.paramMap.get('keyword');
