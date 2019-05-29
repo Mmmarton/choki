@@ -1,4 +1,7 @@
-<div class="container">
+<div class="container"
+     *ngIf="headerService.getHeaderState() !== 'HIDDEN'"
+     [ngClass]="{small: headerService.getHeaderState() === 'SMALL'}">
   <div class="dash"></div>
-  <a routerLink="/home" class="home-link">Choki</a>
+  <a routerLink="/home"
+     class="home-link">Choki</a>
 </div>

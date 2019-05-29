@@ -30,3 +30,11 @@
   color: $color1;
   z-index: 100;
 }
+
+.small {
+  justify-content: left;
+  .home-link {
+    top: 1.5rem;
+    font-size: 6rem;
+  }
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChocolatePreview } from '../models';
 
 @Component({
@@ -13,7 +14,7 @@ export class ChocolatePreviewComponent implements OnInit {
   @Input()
   chocolate: ChocolatePreview;
 
-  constructor() {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.transforms = `rotate(${this.random(
@@ -28,6 +29,9 @@ export class ChocolatePreviewComponent implements OnInit {
 
   showMore(event) {
     event.stopPropagation();
+    this.router.navigate([
+      'chocolate/details/' + this.chocolate.brand + '/' + this.chocolate.type
+    ]);
   }
 
   get fullStars() {
